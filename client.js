@@ -16,9 +16,18 @@ const connect = function () {
 
   conn.on("connect", () => {
     console.log("Connection established");
-  })
+    conn.write("Name: C.D");
+    // setInterval(() => {
+    //   conn.write("Move: up");
+    // }, 50);
+    // setTimeout(() => {
+    //   conn.write("Move: left");
+    //   setTimeout(() => {
+    //     conn.write("Move: down");
+    //   }, 50);
+    // }, 50);
+  });
 
-  conn.write("Name: CRD")
 
   return conn;
 };
