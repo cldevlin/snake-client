@@ -14,6 +14,12 @@ const connect = function () {
     console.log(input);
   });
 
+  conn.on("connect", () => {
+    console.log("Connection established");
+  })
+
+  conn.write("Name: CRD")
+
   return conn;
 };
 
